@@ -1,0 +1,141 @@
+ /* Estilos del encabezado y botones */
+ #foo [data-role="header"] {
+    background: linear-gradient(to bottom, #673AB7, #512DA8);
+    color: #fff;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+    border: none;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    position: relative; /* Añadido para que el banner no oculte el contenido debajo del encabezado */
+}
+
+#foo [data-role="header"] .banner {
+    text-align: center;
+    padding: 10px;
+}
+
+#foo [data-role="header"] .banner img {
+    max-width: 100%;
+    height: auto;
+}
+
+#foo [data-role="header"] h1 {
+    margin: 0;
+    padding: 15px;
+    font-size: 1.5em;
+}
+
+/* Estilos del contenedor de productos */
+.contenedor-horizontal {
+    display: flex;
+    justify-content: space-between; /* Espacio uniforme entre los elementos */
+    align-items: center; /* Centrar los elementos verticalmente */
+    flex-wrap: wrap;
+}
+
+.game {
+    width: calc(32% - 20px); /* Ancho ajustado al 32% con margen */
+    background-color: #480c6c;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 50px;
+    box-sizing: border-box;
+    position: relative;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.game img {
+    max-width: 100%;
+    max-height: 300px;
+    margin-bottom: 10px;
+}
+
+.game-details {
+    flex-grow: 1;
+}
+
+h2 {
+    margin-top: 0;
+}
+
+.price {
+    color: #20a619;
+    font-weight: bold;
+}
+
+/* Estilo del botón "Comprar" */
+.buy-button {
+    background-color: #512DA8;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+ /* Estilos del encabezado y botones */
+ #detallejuego [data-role="header"] {
+    background: linear-gradient(to bottom, #673AB7, #512DA8);
+    color: #f8f5f9;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+    border: none;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    position: relative; /* Añadido para que el banner no oculte el contenido debajo del encabezado */
+    
+}
+
+#detallejuego [data-role="header"] h1 {
+    margin: 0;
+    padding: 15px;
+    font-size: 1.5em;
+}
+
+/* Estilos de la pantalla de detalles del juego */
+#detallejuego .detallejuego-game {
+    background-color: #673AB7; /* Fondo morado */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+    text-align: center;
+    color: #fff; /* Texto blanco */
+}
+
+#detallejuego .detallejuego-game img {
+    max-width: 100%;
+    max-height: 300px;
+    margin-bottom: 10px;
+}
+
+#detallejuego .detallejuego-game-details {
+    color: #fff;
+}
+
+#detallejuego .detallejuego-platform {
+    color: #20a619;
+    font-weight: bold;
+}
+
+#detallejuego .detallejuego-description {
+    margin-top: 10px;
+    color: #ddd;
+}
+
+#detallejuego .detallejuego-price {
+    color: #20a619;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/* Estilo del botón "Comprar" */
+#detallejuego .buy-button {
+    background-color: #512DA8;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-top: 10px;
+}

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <title>Tienda Zara</title>
+</head>
+<body>
+    <div data-role="page">
+        <div data-role="header">
+            <H1>Tienda Pisa y Corres</H1>
+        <div data-role="navbar">
+        <ul>
+        <li><a href="#" data-icon="home">inicio</a></li>
+        <li><a href="#" data-icon="tag" class="ui-btn-active">Productos</a></li>
+        <li><a href="#" data-icon="user">Empleados</a></li>
+        </ul>
+        </div>
+        </div>
+        <form action="/api/products" method="POST">
+                <div data-role="content">
+                    <label for="text_barcode">Codigo de Barras:</label>
+                    <input type="text" name="barcode" id="text_barcode" placeholder="Codigo de Barras" value="">
+
+                    <label for="text_description">Descripcion:</label>
+                    <input type="text" name="description" id="text_description" placeholder="Descripcion" value="">
+
+                    <label for="text_brand">Nombre del Producto:</label>
+                    <input type="text" name="brand" id="text_brand" placeholder="Nombre del Producto" value="">
+
+                    <label for="text_cost">Precio de Compra:</label>
+                    <input type="text" name="cost" id="text_cost" placeholder="Precio de Compra" value="">
+
+                    <label for="text_price">Precio de Venta:</label>
+                    <input type="text" name="price" id="text_price" placeholder="Precio de Venta" value="">
+
+                    <label for="number">En Existencia:</label>
+                    <input type="text" name="stock" id="number" placeholder="En Existencia" value="">
+
+                    <label for="date">Fecha Caducidad </label>
+                    <input type="date" name="expiredDate" data-role="date" data-inline="true">
+
+                    <label for="flip-6">Activo:</label>
+                    <select name="status" id="flip-6" data-role="slider" data-mini="true">
+                    <option value="1">Off</option>
+                    <option value="0">On</option>
+                    </select>
+
+                    <button type="submit" id="submit-6" class="ui-shadow ui-btn ui-corner-all ui-mini">Guardar</button>
+
+                </div>
+            </form>    
+            <form>
+                <input data-type="search" id="searchForCollapsibleSet">
+                </form>
+                <div data-role="collapsibleset" data-filter="true" data-inset="true" id="collapsiblesetForFilter" data-input="#searchForCollapsibleSet">
+                    <% products.forEach((products) => { %>
+                        <div data-role="collapsible" data-filtertext="<%= products.description %>">
+                            <h3><%= products.description %></h3>
+                            <ul data-role="listview" data-inset="false">
+                                <li>Codigo de Barras:<%= products.barcode %></li>
+                                <li>Nombre del Producto:<%= products.brand %></li>
+                                <li>Precio de Compra:<%= products.price %></li>
+                                <li>Precio de Venta:<%= products.cost %></li>
+                                <li>En Existencia:<%= products.stock %></li>
+                                <li>Fecha Caducidad:<%= products.expiredDate %></li>
+                                <li>Activo:<%= products.status %></li>
+                                <li><a href="/api/products/<%= products.barcode %>" class="ui-btn" style="background-color: blue; color: aliceblue;">Editar</a></li>
+                                <li><a href="/api/products/delete/<%= products.barcode %>" class="ui-btn" style="background-color: rgb(253, 17, 17); color: aliceblue;">Eliminar</a></li>
+                            </ul>
+                        </div>
+                    <% })  %>
+                </div>
+                
+                <div data-role="footer">
+                    <h5>Developed by MR.Vargas</h5>
+                </div>
+        </div>
+    <H1>Hola amigo</H1>
+    <UL>
+        <% products.forEach((product) => { %>
+            <li> <%= products.description %></li>
+            <% }) %>
+    </UL>
+
+    <ul>
+
+    </ul>
+</body>
+</html>
