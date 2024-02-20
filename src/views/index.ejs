@@ -20,7 +20,7 @@
         </ul>
         </div>
         </div>
-        <form action="/api/products" method="POST">
+        <form action="/" method="POST">
                 <div data-role="content">
                     <label for="text_barcode">Codigo de Barras:</label>
                     <input type="text" name="barcode" id="text_barcode" placeholder="Codigo de Barras" value="">
@@ -68,8 +68,8 @@
                                 <li>En Existencia:<%= products.stock %></li>
                                 <li>Fecha Caducidad:<%= products.expiredDate %></li>
                                 <li>Activo:<%= products.status %></li>
-                                <li><a href="/api/products/<%= products.barcode %>" class="ui-btn" style="background-color: blue; color: aliceblue;">Editar</a></li>
-                                <li><a href="/api/products/delete/<%= products.barcode %>" class="ui-btn" style="background-color: rgb(253, 17, 17); color: aliceblue;">Eliminar</a></li>
+                                <li><a href="/<%= products.barcode %>" class="ui-btn" style="background-color: blue; color: aliceblue;">Editar</a></li>
+                                <li><a href="/delete/<%= products.barcode %>" class="ui-btn" style="background-color: rgb(253, 17, 17); color: aliceblue;">Eliminar</a></li>
                             </ul>
                         </div>
                     <% })  %>

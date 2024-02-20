@@ -25,19 +25,19 @@ export const insertOne=(req,res)=>{
     const product = req.body
     console.log(product)
     productDAO.insertOne(req.body)
-    .then(result=>res.redirect('/api/products/'))
+    .then(result=>res.redirect('/'))
     .catch(err=>res.json({status:"server unavailable"}));
 };
 
 export const deleteOne=(req,res)=>{
     productDAO.deleteOne(req.params.barcode)
-    .then(result=>res.redirect('/api/products/'))
+    .then(result=>res.redirect('/'))
     .catch(err=>res.json({status: "Server unavaliable =/"}));
 }
 export const updateOne=(req,res)=>{
     console.log(req.body)
     productDAO.updateOne(req.params.barcode, req.body)
-    .then(result=>res.redirect('/api/products/'))
+    .then(result=>res.redirect('/'))
     .catch(err=>res.json({status: "Server unavaliable =/"}));
 }
 
